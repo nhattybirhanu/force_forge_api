@@ -1,0 +1,7 @@
+{
+  "name": "ForceForge",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
