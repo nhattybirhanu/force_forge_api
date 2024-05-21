@@ -6,6 +6,7 @@ import org.springframework.data.mongodb.core.mapping.MongoId;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -19,8 +20,8 @@ public class Task {
     public String title;
     String description;
     long duration;
-    LocalDateTime startTime;
-    LocalDateTime endTime;
+    LocalTime startTime;
+    LocalTime endTime;
     public long repetitionCount;
     Repetition repetition;
     LocalDate taskStartDate;
@@ -30,6 +31,8 @@ public class Task {
     Priority priority;
     Category category;
     List<Tag> tags;
+
+    List<Day> days;
 
     public void addSubTask(SubTask subTask){
         if (subTasks==null) subTasks=new ArrayList<>();

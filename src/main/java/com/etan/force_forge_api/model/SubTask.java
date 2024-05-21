@@ -1,11 +1,24 @@
 package com.etan.force_forge_api.model;
 
-import java.util.Objects;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.util.Objects;
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class SubTask {
     String id;
     String description;
-    boolean isDone;
+    TaskStatus taskStatus;
+
+
+    public SubTask(String id, String description) {
+        this.id = id;
+        this.description = description;
+    }
+
 
     @Override
     public boolean equals(Object o) {
